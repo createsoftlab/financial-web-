@@ -67,6 +67,18 @@ body {
     width: 100%;
 }
 
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+}
+
+.navbar-toggler-icon::before {
+    content: "☰";
+    font-size: 28px;
+    color: #010b2b; 
+}
+
+
 /* ==========================================================================
    Hero Section with Gradient Overlay
    ========================================================================== */
