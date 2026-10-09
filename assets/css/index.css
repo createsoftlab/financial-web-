@@ -611,3 +611,29 @@
 }
 
 
+/* ==========================================================================
+   Modern Corporate Stats & Counters Styling
+   ========================================================================== */
+
+.stats-counter-section {
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.03);
+}
+
+.stat-item {
+    border-radius: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background-color: #f8fafc;
+}
+
+.stat-item h2 {
+    font-family: inherit;
+    letter-spacing: -1px;
+}
+
+
+

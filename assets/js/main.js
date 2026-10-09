@@ -254,3 +254,51 @@ if (statCardElement) {
 
     statObserver.observe(statSection);
 }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counterSection = document.getElementById("counterSection");
+    const counters = document.querySelectorAll(".counter");
+    let animated = false;
+
+    const runCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute("data-target");
+            const duration = 2000; // Animation duration in milliseconds (2 seconds)
+            const increment = target / (duration / 16); // 60fps frame calculation
+
+            let currentCount = 0;
+
+            const updateCount = () => {
+                currentCount += increment;
+                if (currentCount < target) {
+                    // Add comma formatting for numbers like 3,452
+                    counter.innerText = Math.floor(currentCount).toLocaleString();
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            };
+
+            updateCount();
+        });
+    };
+
+    // Use IntersectionObserver to trigger animation when section is scrolled into view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                runCounters();
+                animated = true;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    if (counterSection) {
+        observer.observe(counterSection);
+    }
+});
