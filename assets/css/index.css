@@ -1,0 +1,613 @@
+/* ==========================================================================
+   Loan Offers Section Styling
+   ========================================================================== */
+
+.loan-offers-section {
+    background-color: #f1f5f9;
+}
+
+.loan-offer-card {
+    border: 2px solid rgba(13, 71, 161, 0.15);
+    border-radius: 1rem;
+    background: #ffffff;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loan-card-img-wrapper {
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loan-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loan-offer-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-blue, #1d4ed8);
+    box-shadow: 0 20px 40px rgba(29, 78, 216, 0.15) !important;
+}
+
+.loan-offer-card:hover .loan-card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+
+
+/* ==========================================================================
+   Modern About Section Styling (Image Grid & Clean Typography)
+   ========================================================================== */
+
+.about-section {
+    background-color: #f8fafc;
+}
+
+/* Image Grid Enhancements */
+.about-image-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.about-img-main, .about-img-sub {
+    border: 3px solid #ffffff;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-img-main img, .about-img-sub img {
+    transition: transform 0.6s ease;
+}
+
+.about-img-main:hover img, .about-img-sub:hover img {
+    transform: scale(1.06);
+}
+
+/* Trusted Partner Floating Card */
+.trusted-partner-card {
+    border: 1px solid rgba(13, 71, 161, 0.12) !important;
+    transition: transform 0.3s ease;
+}
+
+.trusted-partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(13, 71, 161, 0.1) !important;
+}
+
+.trusted-icon-dot {
+    width: 24px;
+    height: 24px;
+    background: var(--primary-blue, #0d47a1);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(13, 71, 161, 0.4);
+}
+
+
+
+/* ==========================================================================
+   Combined About & Modern Feature Cards Styling
+   ========================================================================== */
+
+.about-features-section {
+    background-color: #f8fafc;
+}
+
+/* Image Grid Enhancements */
+.about-image-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.about-img-main, .about-img-sub {
+    border: 3px solid #ffffff;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-img-main img, .about-img-sub img {
+    transition: transform 0.6s ease;
+}
+
+.about-img-main:hover img, .about-img-sub:hover img {
+    transform: scale(1.06);
+}
+
+.trusted-partner-card {
+    border: 1px solid rgba(13, 71, 161, 0.12) !important;
+    transition: transform 0.3s ease;
+}
+
+.trusted-partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(13, 71, 161, 0.1) !important;
+}
+
+.trusted-icon-dot {
+    width: 24px;
+    height: 24px;
+    background: var(--primary-blue, #0d47a1);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(13, 71, 161, 0.4);
+}
+
+/* Combined Feature Cards Styling */
+.combined-feature-card {
+    border: 2px solid rgba(13, 71, 161, 0.15); /* Permanent modern border */
+    border-radius: 1rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-icon-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary-blue, #1d4ed8), var(--primary-blue, #0d47a1));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 1.6rem;
+    transition: transform 0.4s ease;
+}
+
+/* Card Hover Animation */
+.combined-feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-blue, #1d4ed8);
+    box-shadow: 0 20px 40px rgba(29, 78, 216, 0.12) !important;
+}
+
+.combined-feature-card:hover .feature-icon-badge {
+    transform: scale(1.1) rotate(6deg);
+}
+
+/* ==========================================================================
+   Advanced Animated About Image Grid & Floating Trust Badge
+   ========================================================================== */
+
+.about-features-section {
+    background-color: #f8fafc;
+}
+
+.about-image-grid {
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+/* Main Top Image with Floating Animation */
+.about-img-main {
+    border: 3px solid #ffffff;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    animation: slowFloat 6s ease-in-out infinite;
+}
+
+.about-img-main img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-img-main:hover img {
+    transform: scale(1.08);
+}
+
+/* Sub Image with Inverse Floating Animation */
+.about-img-sub {
+    border: 3px solid #ffffff;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    animation: slowFloatReverse 7s ease-in-out infinite;
+}
+
+.about-img-sub img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-img-sub:hover img {
+    transform: scale(1.08);
+}
+
+/* Highly Modern Animated "Trusted Partner" Badge Card */
+.trusted-partner-card {
+    border: 2px solid rgba(13, 71, 161, 0.15) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    animation: badgePulseGlow 4s ease-in-out infinite;
+}
+
+.trusted-partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: shimmerEffect 3s infinite;
+}
+
+.trusted-icon-dot {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--secondary-blue, #1d4ed8), var(--primary-blue, #0d47a1));
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
+    position: relative;
+}
+
+/* Pulsing rings around the dot */
+.trusted-icon-dot::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid var(--secondary-blue, #1d4ed8);
+    border-radius: 50%;
+    animation: rippleEffect 2s linear infinite;
+}
+
+/* Keyframes for Auto Animations */
+@keyframes slowFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slowFloatReverse {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes badgePulseGlow {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 10px 25px rgba(13, 71, 161, 0.08);
+    }
+    50% {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 35px rgba(29, 78, 216, 0.18);
+        border-color: var(--secondary-blue, #1d4ed8) !important;
+    }
+}
+
+@keyframes rippleEffect {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes shimmerEffect {
+    100% { left: 100%; }
+}
+
+
+
+/* ==========================================================================
+   Auto-Sliding Services Marquee Styling
+   ========================================================================== */
+
+.services-auto-slide-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border-top: 1px solid rgba(13, 71, 161, 0.08);
+    border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+}
+
+/* Marquee Container with Fade Edges */
+.marquee-track-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Continuous Sliding Track */
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: autoSlideAnimation 30s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-track-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Individual Marquee Card Specs */
+.marquee-card {
+    width: 280px;
+    flex-shrink: 0;
+    border: 2px solid rgba(13, 71, 161, 0.15); /* Permanent modern border */
+    border-radius: 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marquee-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--secondary-blue, #1d4ed8);
+    box-shadow: 0 15px 30px rgba(29, 78, 216, 0.12) !important;
+}
+
+/* Icon Badge inside Marquee Cards */
+.marquee-icon-badge {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--secondary-blue, #1d4ed8), var(--primary-blue, #0d47a1));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.2);
+}
+
+/* Keyframes for Continuous Auto-Slide */
+@keyframes autoSlideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 0.75rem));
+    }
+}
+/* ==========================================================================
+   Clean White Section Background & Colorful Modern Cards Styling
+   ========================================================================== */
+
+/* Main section background strictly pure white */
+.services-auto-slide-section {
+    background-color: #ffffff !important;
+    background-image: none !important; /* Removes dotted mesh for a pristine clean look */
+    border-top: 1px solid rgba(13, 71, 161, 0.08);
+    border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional soft corporate ambient glow in the background */
+.services-auto-slide-section::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.04) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Marquee track positioning */
+.marquee-track-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Individual Marquee Card with Colorful Modern Borders & Glow */
+.marquee-card {
+    width: 290px;
+    flex-shrink: 0;
+    background: #ffffff;
+    /* Permanent crisp corporate blue border with slight saturation */
+    border: 2px solid rgba(29, 78, 216, 0.18);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.04);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top vibrant accent gradient line on each card */
+.marquee-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue, #0d47a1), var(--secondary-blue, #1d4ed8));
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Colorful & Vibrant Icon Badge */
+.marquee-icon-badge {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, #1d4ed8 0%, #0d47a1 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effects: Elevated Lift, Vibrant Border & Enhanced Glow */
+.marquee-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-blue, #1d4ed8);
+    box-shadow: 0 20px 40px rgba(29, 78, 216, 0.15) !important;
+}
+
+.marquee-card:hover .marquee-icon-badge {
+    transform: scale(1.1) rotate(6deg);
+    box-shadow: 0 12px 25px rgba(29, 78, 216, 0.35);
+}
+
+.marquee-card:hover::before {
+    opacity: 1;
+    height: 6px; /* Slightly thickens accent line on hover */
+}
+
+/* ==========================================================================
+   Colorful Modern Feature Cards Styling (White Text & Icons on Vibrant Gradient)
+   ========================================================================== */
+
+.combined-feature-card {
+    /* Vibrant modern corporate gradient background for cards */
+    background: linear-gradient(135deg, #0d47a1 0%, #081c5a 50%, #081229 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.25rem;
+    box-shadow: 0 15px 35px rgba(29, 78, 216, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shine effect overlay */
+.combined-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    animation: shimmerCard 4s infinite;
+}
+
+/* Force all text inside the cards to be clean white */
+.combined-feature-card h5 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.combined-feature-card p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Icon Badge Styling with White/Glassmorphism background */
+.combined-feature-card .feature-icon-badge {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Hover Effects: Lift up and vibrant shadow glow */
+.combined-feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 22px 45px rgba(29, 78, 216, 0.35) !important;
+}
+
+.combined-feature-card:hover .feature-icon-badge {
+    transform: scale(1.1) rotate(6deg);
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+@keyframes shimmerCard {
+    100% { left: 100%; }
+}
+
+
+
+/* ==========================================================================
+   Auto-Sliding Testimonials Marquee Styling
+   ========================================================================== */
+
+.testimonials-section {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(13, 71, 161, 0.08);
+    border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+}
+
+/* Marquee Container with Fade Edges */
+.testimonials-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Continuous Sliding Track */
+.testimonials-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: testimonialSlide 35s linear infinite;
+}
+
+/* Pause animation on mouse hover */
+.testimonials-marquee-container:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+/* Individual Review Card Specifications */
+.testimonial-card {
+    width: 340px;
+    flex-shrink: 0;
+    background: #ffffff;
+    /* Permanent clean corporate blue border */
+    border: 2px solid rgba(13, 71, 161, 0.15);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.04);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+/* Top corporate blue accent line on each review card */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue, #0d47a1), var(--secondary-blue, #1d4ed8));
+    opacity: 0.8;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effects: Lift & Border Glow */
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-blue, #1d4ed8);
+    box-shadow: 0 20px 40px rgba(29, 78, 216, 0.12) !important;
+}
+
+.testimonial-card:hover::before {
+    opacity: 1;
+    height: 6px;
+}
+
+/* Keyframes for Continuous Marquee Sliding */
+@keyframes testimonialSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 0.75rem));
+    }
+}
+
+

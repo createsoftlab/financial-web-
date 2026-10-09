@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Custom External CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+
 </head>
 <body>
 
@@ -33,11 +36,38 @@
             <i class="bi bi-building-fill me-1"></i> About Us
         </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link active" href="services.html">
             <i class="bi bi-briefcase-fill me-1"></i> Services
         </a>
-    </li>
+    </li> -->
+
+    <!-- Services Dropdown with Loan Offers Link -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-briefcase-fill me-1"></i> Services
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3 mt-2 p-2" aria-labelledby="servicesDropdown">
+        <li>
+            <a class="dropdown-item rounded-2 py-2" href="services.html">
+                <i class="bi bi-grid-fill me-2 text-primary"></i> All Services
+            </a>
+        </li>
+        <li><hr class="dropdown-divider my-1"></li>
+      
+        <li>
+            <!-- Click karama page eke Loan Offers section ekatama smooth scroll wenawa -->
+            <a class="dropdown-item rounded-2 py-2 fw-medium text-dark" href="#loan-offers">
+                <i class="bi bi-cash-coin me-2 text-primary"></i> Loan Offers
+            </a>
+        </li>
+    </ul>
+</li>
+
+
+
+
+
     <li class="nav-item">
         <a class="nav-link" href="contact.html">
             <i class="bi bi-headset me-1"></i> Contact Us
@@ -65,8 +95,252 @@
         </div>
     </header>
 
-    <!-- Services Grid Section -->
-    <section class="py-5 bg-light">
+   
+<!-- Modern Services Floating Icon Cards Section (Staggered Scroll Reveal) -->
+<section class="py-5 services-floating-section position-relative overflow-hidden">
+    <div class="container py-5">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-5 reveal-on-scroll">
+            <span class="badge form-badge px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">Our Expertise</span>
+            <h2 class="fw-bold display-6 text-dark">Comprehensive Financial Solutions</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px;">Designed around security, transparency, and rapid processing to elevate your personal and business growth.</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4 pt-4">
+            
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-1">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Simple Loan Processing</h5>
+                    <p class="text-muted small mb-0">Get your loan approved quickly and efficiently with minimal documentation and hassle-free procedures.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-2">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-pie-chart-fill"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Customized Financial Plans</h5>
+                    <p class="text-muted small mb-0">We design financial solutions that suit your business needs, ensuring flexibility and growth opportunities.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-3">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Transparent Terms</h5>
+                    <p class="text-muted small mb-0">No hidden fees or surprises. Our loan agreements are clear, fair, and built on absolute trust.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-4">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Financial Security</h5>
+                    <p class="text-muted small mb-0">Ensure peace of mind with reliable loan schemes backed by professional support and guidance.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-5">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Expert Support</h5>
+                    <p class="text-muted small mb-0">Access our experienced team to guide you in making smart financial decisions and navigating challenges.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-6">
+                <div class="service-floating-card bg-white p-4 pt-5 rounded-4 shadow-sm position-relative h-100 mt-4">
+                    <div class="floating-icon-badge shadow-sm">
+                        <i class="bi bi-briefcase-fill"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-3 mt-2">Business Empowerment Tools</h5>
+                    <p class="text-muted small mb-0">Leverage our resources to boost your business operations and achieve your financial goals.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Modern Loan Offers Grid Section (3 Cards per Row) -->
+<section id="loan-offers" class="py-5 loan-offers-section position-relative overflow-hidden">
+    <div class="container py-4">
+        
+        <!-- Section Header -->
+        <div class="d-flex justify-content-between align-items-end mb-5 reveal-on-scroll">
+            <div>
+                <span class="text-primary text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 1px;">Exclusive Deals</span>
+                <h2 class="fw-bold display-6 text-dark mb-0">Special Loan Offers</h2>
+            </div>
+        </div>
+
+        <!-- Cards Grid (Rows & Columns instead of Horizontal Scroll) -->
+        <div class="row g-4">
+            
+            <!-- Offer Card 1: Vehicle Leasing -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-1">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop" alt="Vehicle Leasing" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">Low Interest</div>
+                            <h4 class="fw-bold text-dark mb-2">Vehicle Leasing</h4>
+                            <p class="text-muted small mb-4">Drive your dream vehicle today with flexible repayment periods and instant approvals.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Starting from</small>
+                                <span class="fw-bold text-primary fs-5">12.5% p.a</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Apply Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Card 2: Personal Loans -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-2">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop" alt="Personal Loans" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">Instant Cash</div>
+                            <h4 class="fw-bold text-dark mb-2">Personal Loans</h4>
+                            <p class="text-muted small mb-4">Fulfill your urgent financial needs, weddings, or travel plans with zero complex paperwork.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Up to</small>
+                                <span class="fw-bold text-primary fs-5">LKR 5 Million</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Apply Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Card 3: SME Enterprise Loan -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-3">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop" alt="Business Loan" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">Business Growth</div>
+                            <h4 class="fw-bold text-dark mb-2">SME Enterprise Loan</h4>
+                            <p class="text-muted small mb-4">Scale your business operations, buy raw materials, or expand your restaurant/outlet easily.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Special Grace Period</small>
+                                <span class="fw-bold text-primary fs-5">3 Months</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Apply Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Card 4: Fixed Deposits -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-1">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600&auto=format&fit=crop" alt="Fixed Deposits" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">High Returns</div>
+                            <h4 class="fw-bold text-dark mb-2">Fixed Deposits</h4>
+                            <p class="text-muted small mb-4">Secure your savings with some of the highest and safest interest returns in the market.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Interest Rate</small>
+                                <span class="fw-bold text-primary fs-5">Up to 16%</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Invest Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Card 5: Housing & Property Loan -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-2">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop" alt="Housing Loan" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">Dream Home</div>
+                            <h4 class="fw-bold text-dark mb-2">Housing & Property</h4>
+                            <p class="text-muted small mb-4">Build, buy, or renovate your dream property with long-term payment schedules.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Easy Terms</small>
+                                <span class="fw-bold text-primary fs-5">Up to 20 Years</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Apply Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Card 6: Educational & Foreign Travel Loan -->
+            <div class="col-md-6 col-lg-4 reveal-on-scroll reveal-delay-3">
+                <div class="loan-offer-card bg-white rounded-4 shadow-sm position-relative overflow-hidden h-100">
+                    <div class="loan-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop" alt="Education Loan" class="img-fluid">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between" style="height: calc(100% - 170px);">
+                        <div>
+                            <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-pill mb-3">Future Ready</div>
+                            <h4 class="fw-bold text-dark mb-2">Education & Travel</h4>
+                            <p class="text-muted small mb-4">Fund higher education degrees locally or abroad, plus professional travel requirements.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                            <div>
+                                <small class="text-muted d-block">Quick Approval</small>
+                                <span class="fw-bold text-primary fs-5">Flexible Plans</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Apply Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+ <!-- Services Grid Section -->
+    <!-- <section class="py-5 bg-light">
         <div class="container py-4">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
@@ -119,7 +393,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+
+
+
 
     <!-- Footer -->
     <footer>
