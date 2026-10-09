@@ -85,7 +85,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section">
+    <!-- <header class="hero-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
@@ -94,6 +94,38 @@
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="services.html" class="btn btn-primary-custom">Explore Services</a>
                         <a href="contact.html" class="btn btn-outline-custom">Talk to an Advisor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+
+
+    <!-- Hero Section: Full Width Banner with Video & Image Slider Background -->
+    <!-- Hero Section with Background Video -->
+    <header class="hero-section position-relative overflow-hidden">
+        
+        <!-- Background Video Element -->
+        <div class="position-absolute w-100 h-100 top-0 start-0 overflow-hidden">
+            <video class="w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+                <source src="assets/videos/hero_baner1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Light Dark Overlay (Keeps video super clear while making white text pop) -->
+        <div class="hero-overlay position-absolute w-100 h-100 top-0 start-0"></div>
+
+        <!-- Hero Content -->
+        <div class="container position-relative z-index-2 py-5" style="min-height: 85vh; display: flex; align-items: center;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-xl-7">
+                    <h1 class="hero-title mb-4 text-white fw-bold display-5">Empowering Your Financial Future with Confidence</h1>
+                    <p class="hero-subtitle mb-4 text-light fs-5">Discover tailored leasing, fixed deposits, microloans, and corporate investment options engineered for growth and stability.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="services.html" class="btn btn-primary-custom btn-lg px-4 py-3">Explore Services</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-3 border-white">Talk to an Advisor</a>
                     </div>
                 </div>
             </div>
