@@ -128,3 +128,129 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     revealElements.forEach(el => scrollObserver.observe(el));
+
+
+
+
+
+
+
+ // ==========================================
+// Auto-calculating Progress Bars & Circular Metrics on Scroll Only
+// ==========================================
+const expertiseSection = document.querySelector('.expertise-section');
+
+if (expertiseSection) {
+    let animatedProgress = false;
+
+    const expertiseObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2 // Triggers when 20% of the section is visible on scroll
+    };
+
+    const expertiseObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animatedProgress) {
+                animatedProgress = true;
+
+                // 1. Animate Horizontal Bars & Percentages
+                const progressBars = document.querySelectorAll('.custom-bar');
+                const percentageTexts = document.querySelectorAll('.progress-percentage');
+
+                progressBars.forEach((bar, index) => {
+                    const targetWidth = bar.getAttribute('data-width');
+                    bar.style.width = targetWidth;
+
+                    const targetVal = parseInt(percentageTexts[index].getAttribute('data-target'));
+                    let currentVal = 0;
+                    const counter = setInterval(() => {
+                        if (currentVal >= targetVal) {
+                            clearInterval(counter);
+                        } else {
+                            currentVal++;
+                            percentageTexts[index].innerText = currentVal + '%';
+                        }
+                    }, 1500 / targetVal);
+                });
+
+                // 2. Animate Circular Image Card Numbers
+                const circularNumbers = document.querySelectorAll('.circular-number');
+                circularNumbers.forEach(numEl => {
+                    const target = parseInt(numEl.getAttribute('data-target'));
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        if (current >= target) {
+                            clearInterval(timer);
+                        } else {
+                            current++;
+                            numEl.innerText = current + '%';
+                        }
+                    }, 1500 / target);
+                });
+
+                // Stop observing once animated
+                observer.unobserve(entry.target);
+            }
+        });
+    }, expertiseObserverOptions);
+
+    expertiseObserver.observe(expertiseSection);
+}
+
+
+
+    // ==========================================
+// Auto-calculating Stat Counters on Scroll Only
+// ==========================================
+const statCardElement = document.querySelector('.stat-card-modern');
+
+if (statCardElement) {
+    const statSection = statCardElement.closest('section') || statCardElement;
+    let statAnimated = false;
+
+    const statObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2 // Triggers when 20% of the section is visible on scroll
+    };
+
+    const statObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !statAnimated) {
+                statAnimated = true;
+
+                const counters = document.querySelectorAll('.counter-number');
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    const suffix = counter.getAttribute('data-suffix') || '';
+                    const isDecimal = counter.getAttribute('data-decimal') === '1';
+                    
+                    let current = 0;
+                    const steps = 40; // smoothness steps
+                    const increment = target / steps;
+                    const speed = 1500 / steps;
+
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        
+                        if (isDecimal) {
+                            counter.innerText = current.toFixed(1) + suffix;
+                        } else {
+                            counter.innerText = Math.floor(current) + suffix;
+                        }
+                    }, speed);
+                });
+
+                // Stop observing once animated
+                observer.unobserve(entry.target);
+            }
+        });
+    }, statObserverOptions);
+
+    statObserver.observe(statSection);
+}

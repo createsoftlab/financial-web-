@@ -1,0 +1,552 @@
+/* ==========================================================================
+   Modern 3D Animated About & Vision/Mission Section
+   ========================================================================== */
+
+.about-section-bg {
+    background: linear-gradient(180deg, #e2eaf4 0%, var(--light-bg) 100%);
+}
+
+/* Vision & Mission Cards */
+.vm-card {
+    background: #ffffff;
+    border: 1px solid rgba(13, 71, 161, 0.08);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.12) !important;
+    border-color: var(--accent-blue);
+}
+
+.vm-icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(0, 176, 255, 0.2));
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 1.4rem;
+    transition: var(--transition-smooth);
+}
+
+.vm-card:hover .vm-icon-box {
+    background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+    color: #ffffff;
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* ==========================================================================
+   3D Floating Phone Mockup Animation
+   ========================================================================== */
+
+.mockup-scene {
+    perspective: 1200px;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glowing background atmosphere circle */
+.scene-glow-circle {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(3, 26, 37, 0.25) 0%, rgba(25, 118, 210, 0.05) 70%, transparent 100%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+.phone-mockup {
+    width: 270px;
+    background: #111827;
+    border-radius: 36px;
+    padding: 12px;
+    border: 4px solid #0d1a30;
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.phone-screen {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 18px 14px;
+    min-height: 440px;
+    overflow: hidden;
+}
+
+/* Front phone tilt & floating keyframe */
+.phone-front {
+    transform: rotateY(-12deg) rotateX(8deg) translateY(-20px);
+    animation: floatPhoneFront 6s ease-in-out infinite;
+    box-shadow: -20px 20px 40px rgba(10, 25, 47, 0.25);
+}
+
+.phone-front:hover {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-25px) scale(1.02);
+}
+
+/* Back phone layered behind with offset */
+.phone-back {
+    right: 15%;
+    top: 5%;
+    transform: rotateY(15deg) rotateX(10deg) scale(0.9) translateY(10px);
+    opacity: 0.85;
+    animation: floatPhoneBack 7s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.chart-wave-line {
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(25, 118, 210, 0.2) 0%, transparent 100%);
+    border-bottom: 3px solid var(--secondary-blue);
+    border-radius: 0 0 12px 12px;
+}
+
+/* Keyframe Animations */
+@keyframes floatPhoneFront {
+    0%, 100% {
+        transform: rotateY(-12deg) rotateX(8deg) translateY(-20px);
+    }
+    50% {
+        transform: rotateY(-8deg) rotateX(4deg) translateY(-35px);
+    }
+}
+
+@keyframes floatPhoneBack {
+    0% {
+        transform: rotateY(15deg) rotateX(10deg) scale(0.9) translateY(10px);
+    }
+    100% {
+        transform: rotateY(18deg) rotateX(8deg) scale(0.9) translateY(-10px);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+/* ==========================================================================
+   Modern Animated Vision & Mission Cards (Colored & Glowing)
+   ========================================================================== */
+
+.vm-card-modern {
+    background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue));
+    border: 1px solid rgba(0, 176, 255, 0.25);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+/* Subtle background accent glow shape inside the card */
+.vm-card-glow-bg {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(3, 29, 41, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effects for a 3D animated lift and glow */
+.vm-card-modern:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(10, 25, 47, 0.4) !important;
+    border-color: var(--accent-blue);
+}
+
+.vm-card-modern:hover .vm-card-glow-bg {
+    transform: scale(1.8);
+}
+
+/* Modern Icon Box Styling */
+.vm-icon-box-modern {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 1.4rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.vm-card-modern:hover .vm-icon-box-modern {
+    background: var(--accent-blue);
+    color: var(--dark-navy);
+    transform: rotate(8deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 176, 255, 0.6);
+}
+
+
+/* ==========================================================================
+   Rich Multi-Image Collage & Background Styling
+   ========================================================================== */
+
+.rich-about-section {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf4 100%);
+    position: relative;
+}
+
+.financial-multi-collage {
+    position: relative;
+    height: 460px;
+    width: 100%;
+}
+
+.collage-card {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image 1 (Main Large Left Image) */
+.card-img-1 {
+    width: 60%;
+    left: 0;
+    top: 0;
+    border: 4px solid #ffffff;
+    box-shadow: 0 15px 35px rgba(10, 25, 47, 0.15);
+    animation: floatCollage1 6s ease-in-out infinite alternate;
+}
+
+.card-img-1 img {
+    height: 270px;
+    object-fit: cover;
+}
+
+/* Image 2 (Middle Overlapping Meeting Image) */
+.card-img-2 {
+    width: 50%;
+    right: 5%;
+    top: 70px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 15px 35px rgba(13, 71, 161, 0.2);
+    animation: floatCollage2 5s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+.card-img-2 img {
+    height: 210px;
+    object-fit: cover;
+}
+
+/* Image 3 (Bottom Small Floating Image) */
+.card-img-3 {
+    width: 42%;
+    left: 15%;
+    bottom: 0;
+    border: 4px solid #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    animation: floatCollage3 7s ease-in-out infinite alternate;
+    z-index: 3;
+}
+
+.card-img-3 img {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Floating Trust Badge */
+.card-badge-float {
+    width: 160px;
+    right: 10%;
+    bottom: 20px;
+    border: 1px solid rgba(0, 176, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(10, 25, 47, 0.1) !important;
+    animation: floatBadge 6s ease-in-out infinite alternate;
+    z-index: 4;
+}
+
+/* Background Atmospheric Glow */
+.collage-glow-bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 176, 255, 0.25) 0%, transparent 70%);
+    top: 25%;
+    left: 30%;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Floating Animations */
+@keyframes floatCollage1 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+@keyframes floatCollage2 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+@keyframes floatCollage3 {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(-1.5deg); }
+}
+
+@keyframes floatBadge {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .financial-multi-collage {
+        height: 380px;
+    }
+    .card-img-1 { width: 70%; }
+    .card-img-2 { width: 55%; top: 50px; }
+    .card-img-3 { width: 45%; }
+}
+
+
+/* ==========================================================================
+   Rounded Circular Background Image Cards Styling
+   ========================================================================== */
+
+.circular-img-wrap {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(13, 71, 161, 0.2);
+    position: relative;
+}
+
+.circular-img-wrap img {
+    transition: transform 0.6s ease;
+}
+
+.metric-card:hover .circular-img-wrap img {
+    transform: scale(1.1);
+}
+
+/* Semi-transparent blue gradient overlay over the background image */
+.circular-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.75), rgba(13, 71, 161, 0.75));
+    backdrop-filter: blur(1px);
+    transition: var(--transition-smooth);
+}
+
+.circular-number {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================================================
+   External Background Color Styling for Metric Cards
+   ========================================================================== */
+
+.metric-card {
+    background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue)) !important;
+    border: 1px solid rgba(0, 176, 255, 0.25) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Change inner text colors to white so they stand out clearly on the blue background */
+.metric-card h5 {
+    color: #ffffff !important;
+}
+
+.metric-card p {
+    color: #cbd5e1 !important; /* Soft light gray/blue text */
+}
+
+/* Hover effects for a 3D animated lift and glow */
+.metric-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(10, 25, 47, 0.35) !important;
+    border-color: var(--accent-blue) !important;
+}
+
+/* Circular image border enhancement for colored background */
+.metric-card .circular-img-wrap {
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.metric-card:hover .circular-img-wrap img {
+    transform: scale(1.1);
+}
+
+
+/* ==========================================================================
+   Modern Animated Stat Cards (Corporate Blue Theme)
+   ========================================================================== */
+
+.stat-card-modern {
+    background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue));
+    border: 1px solid rgba(0, 176, 255, 0.25);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+/* Background atmospheric glow shape inside the card */
+.card-bg-glow {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(0, 176, 255, 0.35) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effects for a 3D animated lift and glow */
+.stat-card-modern:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(10, 25, 47, 0.35) !important;
+    border-color: var(--accent-blue);
+}
+
+.stat-card-modern:hover .card-bg-glow {
+    transform: scale(1.6);
+}
+
+
+/* ==========================================================================
+   Scroll Reveal Animation Classes
+   ========================================================================== */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional Delay for the Right Text Column */
+.reveal-delay-1 {
+    transition-delay: 0.2s;
+}
+
+/* ==========================================================================
+   Modern Core Values Card Styling (Clean Light & Easy on Eyes)
+   ========================================================================== */
+
+.core-values-card {
+    background: #ffffff;
+    border: 1px solid rgba(13, 71, 161, 0.12);
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.06);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.core-values-card h3 {
+    color: var(--primary-blue, #0d47a1) !important;
+}
+
+/* Atmospheric Glow Background Shape */
+.values-bg-glow {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(13, 71, 161, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.6s ease;
+}
+
+.core-values-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(13, 71, 161, 0.12) !important;
+    border-color: var(--secondary-blue);
+}
+
+.core-values-card:hover .values-bg-glow {
+    transform: scale(1.5);
+}
+
+/* Header Icon */
+.values-header-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(13, 71, 161, 0.08);
+    color: var(--primary-blue, #0d47a1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    border: 1px solid rgba(13, 71, 161, 0.15);
+}
+
+/* Individual Value List Items */
+.value-item {
+    background: #f8fafc;
+    border: 1px solid rgba(13, 71, 161, 0.06);
+    transition: all 0.3s ease;
+}
+
+.value-item strong {
+    color: #1e293b !important;
+}
+
+.value-item span {
+    color: #64748b !important;
+}
+
+.value-item:hover {
+    background: #edf2f7;
+    transform: translateX(6px);
+    border-color: rgba(13, 71, 161, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.value-check-icon {
+    color: var(--primary-blue, #0d47a1);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover .value-check-icon {
+    transform: scale(1.2) rotate(10deg);
+}
